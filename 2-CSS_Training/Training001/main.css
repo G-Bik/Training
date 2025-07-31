@@ -1,0 +1,71 @@
+/* Contoh Basic Selector */
+h1 {
+  color: rgb(240, 1, 1);
+  text-align: center;
+}
+/* contoh Class Selector */
+.First_Step {
+  color: brown;
+}
+
+/* contoh Sepsifik Class Selector jika value class pada element Html ada yang sama */
+h2.First_Step {
+  color: darkblue;
+  text-align: center;
+}
+
+/* contoh id Selector. Tidak ada Spesifik Id Selector karena deklarasi id setiap elemen harus uniqe*/
+#Basic_CSS {
+  text-align: right;
+}
+
+/* contoh grouping Selector, jika hanya berupa elemen maka hanya perlu (,) koma saja untuk diversifikasinya, tapi jika mentargetkan element pada sebuah section dengan id, maka dideklarasikan seperti dibawah */
+#Selectors_CSS > h3,
+#Selectors_CSS > p {
+  color: rgb(58, 14, 51);
+}
+
+/* Contoh selector Global, biasanya untuk backround page */
+.Second_Step {
+  background-color: rgb(186, 190, 130);
+}
+
+/* Contoh memberikan border pada element pada Html  */
+.Third_Step {
+  border: 6px solid tomato;
+}
+
+/* Contoh memberikan background dengan gambar (image), yang mana secara default gambar di repeat paga webpage */
+.First_Step {
+  background-image: url("./img/backround02.jpeg");
+}
+
+/* Contoh melakukan repeat pada backrground terlihat lebih baik, tapi karena gambar terlalu kecil maka sebaiknya menggunakan property background-size dengan value cover*/
+.Second_Step {
+  background-image: url("./img/backround03.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Contoh melakukan background attachment, yang mana gambar pada header element akan tetap terlihat apabila di scroll kebawah karena memanggil property background-attachment: dengan value fixed, apabila value menjadi scroll maka gambar berada pada posisi awal jika di scroll */
+header {
+  background-image: url("./img/COD.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  /* background-attachment: scroll; */
+}
+
+/* Contoh menggunakan background shorthand yang mana dengan menggunakan property background, kita bisa menggunakan lebih dari 1 value dari property Background yang lainnya 
+
+Rumus utama dalam melakukan shorthand yaitu dengan urutan sebagai berikut :
+
+-background-color
+-background-image
+-background-repeat
+-background-attachment
+-background-position
+*/
+
+footer p {
+  background: rgb(136, 83, 73) url("./img/backround02.jpeg") no-repeat scroll;
+}

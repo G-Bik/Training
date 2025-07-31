@@ -1,0 +1,8 @@
+Training002 Contains:
+
+-CSS Syntax
+-CSS Selectors
+-CSS How To
+-CSS Comments
+-CSS Colors
+-CSS Backgrounds

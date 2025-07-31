@@ -1,0 +1,161 @@
+/* Contoh memberikan garis pinggir (border) sesuai jenisnya pada element html (contoh dibawah adalah pada element h1 dalam inner element header)*/
+header h1 {
+  border-style: solid;
+}
+
+/* Contoh memberikan border dengan ketebalan tertentu serta memberi warna pada border tersebut*/
+header blockquote {
+  border-style: solid;
+  border-width: 10px;
+  border-color: #ebd93a;
+}
+
+/* Contoh memberikan border pada 1 sisi dalam element HTML beserta warna dan ketebalannya (contoh dibawah adalah pada setiap tags h2 dalam elemen div, maka dari itu semua h2 dalam semua div akan diberikan style) */
+div h2 {
+  border-left-style: solid;
+  border-color: #31d4fd;
+  border-width: 10px;
+}
+
+/* Contoh dibawah adalah cara menggunakan Border Shorthand dengan property border, serta membuat border menjadi lebih melengkung dengan property border-radius.
+
+Rumus utama dalam melakukan Shorthand adalah:
+
+-border-width
+-border-style (required)
+-border-color
+*/
+div section h3 {
+  border: dashed #1756df 5px;
+  border-radius: 10px;
+}
+
+/* Contoh memberikan margin pada element html (contoh dibawah adalah memilih tags paragraft pada id section "Baisc_CSS", yang mana agar value tags <p> berada di center dengan memberi margin di sekitarnya) */
+#Basic_CSS > p:first-of-type {
+  margin-top: 50px;
+  margin-right: 50px;
+  margin-bottom: 50px;
+  margin-left: 50px;
+}
+
+/* 
+Contoh margin collapse dimana jika 2 syntax CSS dengan property margin dengan value yang berhubungan seperti value top & value bottom atau left & right, maka value kedua margin pada syntax yang bersebelahan langsung dijumlahkan.
+
+Contohnya dibawah, element h3 memiliki margin botom 50px dan element p memiliki margin 20px, sehingga margin yang dihasilkan adalah 50px + 20px = 70px.
+
+Rumus utama dalam melakukan Shorthand adalah:
+
+-margin-top
+-margin-right
+-margin-bottom
+-margin-left
+*/
+#Selectors_CSS > h3:first-of-type {
+  margin: 0 0 50px 0;
+}
+#Selectors_CSS > p:first-of-type {
+  margin: 20px 0 0 0;
+}
+
+/* Contoh Padding (memberikan jarak antara element dengan border) pada CSS 
+
+Contoh dibawah menggunakan padding multi value, yang mana menggunakan property padding dengan 2 value dari 4 value. 4 value memiliki urutan yaitu:
+
+padding-top
+padding-right
+padding-bottom
+padding-left
+(searah jarum jam)
+ 
+jika 2 value maka yang diisi adalah top&bottom(px) right&left(px) */
+
+header h1 {
+  padding: 25px 50px;
+}
+
+/* 
+Contoh Width & Height pada CSS dengan menggunakan property width dan height serta max-width dan max-height.
+
+penjelasan perbedaan height dan max-height serta width dan max-width adalah sebagai berikut:
+
+-width/height = menentukan lebar/tinggi element tanpa memiliki batasan lebar value (atau kita bisa mengisi value sebesar atau sekecil mungkin)
+
+-Dengan menambah max-width/max-height = kita dapat menentukan lebar/tinggi element dengan batasan value dari width/height value (atau memberikan batasan width/height atau lebar/tinggi agar tidak berlebihan)
+
+Summary:
+
+Small height = less space, next element moves up.
+Large height = more space, next element moves down.
+Letting the content define the height (no fixed height) is usually best for responsive layouts.
+
+*/
+#Selectors_CSS p:first-of-type {
+  width: 200px;
+  max-width: 100%;
+  height: 100px;
+  max-height: 200px;
+}
+
+/* Contoh konsep Box Models, yang mana mengartikan layout CSS pada setiap element HTML dalam sebuah box (kotak) layout yang terdiri dari beberapa property. Berikut beberapa property layout CSS dari terluar hingga terdalam :
+
+- margin
+- border
+- padding
+- Content CSS yang dipilih*/
+#Text_CSS p:first-of-type {
+  border: solid 30px #635a0c;
+  padding: 50px;
+  margin: 30px;
+  width: 50%;
+  max-width: 200px;
+  /* height: 100px;
+  max-height: 200px; */
+}
+
+/* Contoh dibawah digunakan untuk membuat garis pinggir pada border atau diistilahkan sebagai outline. Cara setup nya hampir sama dengan border, namun terdapat property outline-offset yang berfungsi sebagai padding antara outline dengan border */
+#Rest_CSS_Module h3:first-of-type {
+  outline: solid 5px #f0f;
+  outline-offset: 20px;
+}
+
+/* Contoh dibawah digunakan untuk melakukan style pada text element yang ada pada html */
+#Text_CSS p:first-of-type {
+  color: rgb(255, 0, 0);
+  text-align: center;
+}
+
+/* Contoh dibawah digunakan untuk melakukan style pada text element yang ada pada html, dengan mengatur arah teks dari kanan ke kiri (RTL) */
+footer p:first-of-type {
+  direction: rtl; /* Mengatur arah teks dari kanan ke kiri */
+  unicode-bidi: bidi-override; /* Memastikan teks ditampilkan dengan benar dalam arah RTL */
+  text-align: center;
+}
+
+/* Contoh dibawah digunakan untuk melakukan style pada text element yang ada pada html, dengan membuat decoration overline pada teks serta style yang lain */
+#Text_CSS h3:first-of-type {
+  text-decoration: overline; /* Mengatur teks menjadi garis atas */
+  text-decoration-color: #ff0000; /* Mengatur warna garis atas */
+  text-decoration-style: solid; /* Mengatur style garis atas menjadi putus-putus */
+  text-decoration-thickness: 2px; /* Mengatur ketebalan garis atas */
+  font-family: Arial, sans-serif; /* Mengatur jenis font */
+  font-size: 16px; /* Mengatur ukuran font */
+  font-weight: bold; /* Mengatur ketebalan font */
+  text-transform: uppercase; /* Mengubah teks menjadi huruf kapital */
+  letter-spacing: 2px; /* Mengatur jarak antar huruf */
+  line-height: 1.5; /* Mengatur tinggi baris */
+}
+
+/* Contoh dibawah digunakan untuk melakukan style pada text element yang ada pada html, dengan membuat transform capitalize dan spacing pada teks */
+#Layout_CSS p:first-of-type {
+  text-transform: capitalize
+    /* Mengubah teks menjadi huruf awal menjadi kapital */;
+  text-indent: 50px; /* Mengatur tab awal paragraf agar terlihat lebih seperti buku */
+  letter-spacing: 3px; /* Mengatur jarak antar huruf */
+  word-spacing: 4px; /* Mengatur jarak antar kata */
+  white-space: pre-wrap; /* Mengatur spasi putih agar teks tetap terformat dengan baik */
+}
+
+/* Contoh dibawah digunakan untuk melakukan style pada text element yang ada pada html, dengan membuat shadow pada teks */
+.Second_Step h2:first-of-type {
+  text-shadow: 5px 5px 8px rgb(3, 95, 15); /* Mengatur bayangan teks */
+}
