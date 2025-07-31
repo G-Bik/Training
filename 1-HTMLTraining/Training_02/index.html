@@ -1,0 +1,640 @@
+<!-- Make sure your name file lowercase and without space for easyest hosting our website, 
+ because uppercase make it problem -->
+
+<!-- Dengan extension VSCode Live Server by Ritwick Dey, kita akan dibuatakan server local secara otomatis
+ dan page yang kita buat langsung. ekstension ini juga membantu kita membuat development server. -->
+
+<!-- Address yang disiapkan untuk kita dalam live server adalah seperti ini : 
+  http://127.0.0.1:5500/index.html atau bisa disebut dengan local server kita atau dev environtment
+  127.0.0.1 = ip address
+  5500 = PORT NUMBER-->
+
+<!DOCTYPE html>
+
+<!-- html disebut dengan elemen, nah dalam html terbagi menjadi 2 area yaitu :
+ 1. area yang terlihat dalam page (body)
+ 2. area metadata yang tidak terlihat dalam page (head), namun menunjukkan identitas page tersebut 
+ dalam elemen html kita juga harus mendeklarasikan bahasa (lang), jika tidak maka eror pada cek W3C.com
+ -->
+<!-- ATURAN PENTING dalam melakukan link pada web adalah "JANGAN SAMPAI MENUNJUKKAN ADDRESS LINK WEB PAGE ATAUPUN SECTION PADA USER, HAL INI BISA MENJADI KUNCI UTAMA DALAM HACKING!!" -->
+
+<!-- ATURAN PENTNG lainnya adalah jangan menulis "ini menuju link ke" karena itu sangat redudansi. Jangan pernah menulis link pada sebuah link, karena sangat redudansi dan terlihat jelek. PASTIKAN link hanya ditulis dalam 1 kata ataupun dalam sebuah tombol saja, JANGAN KALIMAT!!.
+ JANGAN juga menggunakan kata "click here" karena sangat monoton dan jelek-->
+
+<!-- Ada 3 jenis link yang bisa kita buat dalam main html yaitu :
+     1. Absolute Refrences, contohnya pada tags <a> dalam body elemen untuk pindah ke tabs lain
+     2. Relative Refrences, contohnya pada tags <link> dalam head elemen yang mengambil sesuatu dari directory folder progect kita
+     3. Internal Refrences, contohnya pada tags <nav>&<a> yang mengarahkan pada section dalam sebuah page
+     -->
+<html lang="en">
+  <!-- head adalah area (2) atau metadata dalam html, area ini diistilahkan head section -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="author" content="Knowledge AI" />
+    <!-- pencet alt + z untuk wraping text jika ada enter -->
+    <!-- element meta dapat memberikan informasi pada search engine atau memberikan informasi lainnya mengenai services website kita -->
+    <meta
+      name="description"
+      content="Page ini akan membantu kamu dalam belajar HTML jika ada enter pada element seperti ini ingat pencet alt+z"
+    />
+    <title>Improve Website Skill</title>
+    <!-- pada elemen link, rel berarti relate dan href berarti html reference
+         type adalah jenis dimana gambar akan dipasang -->
+    <!-- link yang kita buat disini belumlah menunjukkan https refrensi alamat adrress pada hostingan dan masih menggunakan local https refrensi. hal ini karena kita masih menggunakan refrensi local seperti ini href="html.png", sedangkan refrensi dengan hosting berisikan https:\ -->
+    <!-- Dibawah merupakan contoh link dengan relative refrences yang me link elemen2 yang mendukung hal2 yang ada pada page itu sendiri dengan tags <link> -->
+    <link rel="icon" href="html.png" type="image/x-icon" />
+    <link rel="stylesheet" href="main.css" type="text/css" />
+  </head>
+
+  <!-- body adalah area (1) yang akan terlihat dalam page, area ini diistilahkan body section -->
+  <body>
+    <!-- <header> dapat ditulis belakangan setelah kita selesai menyelesaikan heading hirarki penulisan <h1>-<h6>, dan <header> dapat dituliskan lebih dari 1 kali dalam sebuah page -->
+    <header>
+      <!-- terdapat hirarki dalam penulisan text header(h1,h2,h3,h4) yang mana semuanya harus berurutan dan bukan di tulis acak pada elemen body -->
+      <!-- paragraph atau p dapat berfungsi sebagai detail dari setiap header yang sudah kita deklarasikan -->
+
+      <!-- h1 menjelaskan main topic -->
+      <h1>HEY WELCOME BACK GUSTUT!!</h1>
+
+      <!-- Block Level Element
+        Block level element adalah setiap elemen tulisan seperti header, paragraph dan lainnya dilakukan pada setiap baris baru. Block level elemen adalah pendekatan penulisan element pada setiap baris baru (bukan dalam 1 baris) yang mana dapat di format lagi pada CSS kedepannya. Block level element tidak mengijinkan membuat paragraph dalam sebuah header seperti ini: 
+        <h3>
+            contoh block level elemen 
+            <p>
+                seperti ini bisa seharusnya dipakai contoh 
+            </p>
+        </h3> -->
+
+      <!-- Inline Level Element
+        Inline level element adalah penulisan elemen dalam elemen, tapi bukan elemen dari block line elemen, namun lebih kepada elemen yang melakukan perubahan format tulisan pada block level elemen. Inlive level elemen contohnya seperti ini
+        <p>
+            <strong> contoh inline level elemen </strong>  
+            seperti <em>ini</em> bisa seharusnya dipakai contoh 
+        </p>
+        -->
+
+      <!-- horizontal rules <hr> yang berfungsi untuk membuat garis horisontal dalam membagi setiap aspek element ataupun header dalam body, serta dapat juga sebagai percantik page
+    hal lainnya dengan <hr> adalah pembatas topic dalam sebuah page, yang mana setiap topic ataupun sectionnya bisa kita batasi juga dengan horisontal rule <hr> -->
+      <hr />
+      <!-- <nav> adalah simentic element yang digunakan untuk navigation area atau area navigasi, hal lainnya adalah agar memudahkan kita membaca html pada website kita 
+        Jika kita memiliki lebih dari 1 element <nav> dalam 1 page, maka sebaiknya kita melabeli dengan aria-label="" setiap <nav> agar tidak membingungkan-->
+      <nav aria-label="primary-navigation">
+        <!-- Jika kita menambahkan heading dalam tags <nav> (sebenarnya tidak perlu, tapi semisalnya) seperti ini:
+            <nav>
+                <h2>
+        Maka kita perlu melabelkan nav tersebut sesuai id pada <h2> dan kita rubah aria-label= menjadi aria-labelledby="". berikut contohnya :
+            <nav aria-labelledby="primary-navigation">
+                <h2 id="primary-navigation">Primary Navigation</h2>
+        -->
+        <ul>
+          <li>
+            <!-- ini merupakan contoh melakukan Internal Link Refrences, yang mana link yang kita lakukan masih dalam 1 page namun kita melakukan link pada section yang ada pada page tersebut -->
+            <a href="#html_main"> WELCOME BACK!!</a>
+          </li>
+          <li>
+            <a href="#learning_progress"> Let's Learn!!</a>
+          </li>
+          <!-- key note: blok yang mau di copy dan pencet: shift + alt + tanda panah bawah  -->
+          <li>
+            <a href="#contactme">Form Chat with me</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <hr />
+    <!-- ========================================================================= -->
+    <!-- pada html lama, terdapat simentic elemen <div> atau (divide). element ini digunakan sebagai semantic atau penngelompokan elemen, namun saat ini elemen ini jarang digunakan karena dalam mengelompokkan diperlukan banyak atribut lainnya. Malah pada sekarang, elemen ini dianggap sebagai block elemen, karena jika kita menggunakan elemen ini, diperlukan beberapa hal agar sebuah block code di dalamnya dapat diproses oleh mesin yang lain.
+    Beberapa jenis elemen yang hampir sama dengan <div> diatas yang perlu kita hindari adalah <span>.
+    
+    Tapi jika suatu hari kita tahu bahwa menggunakan simentic elemen bukanlah jalan yang tepat maka menggunakan <div> dan <span> merupakan pilihan yang benar  -->
+
+    <!-- <main> adalah simentic elemen yang dituliskan sebelum <section> pertama dan setelah <section> penutup. tags <main> hanya dituliskan 1 saja per page dalam website. tags <main> dapat dituliskan nanti setelah kita selesai mendeklarasikan section dan conten didalamnya -->
+    <main>
+      <!-- <article> (article) adalah simentic element yang digunakan untuk internal link refrences yaitu mengarahkan user pada beberapa bagian yang ada pada sebuah page sesuai id="..." pada article yang di link 
+      Masih banyak perdebatan penggunaan antara <section> dengan <article> ini karena keduanya lolos dari validator. 
+      Tapi agar mempermudah kita anggap saja dalam 1 <article> terdapat banyak <section> -->
+      <article id="html_main">
+        <!-- h2 menjelaskan Subtopic dari h1 -->
+        <h2>WE REALLY MISS YOU</h2>
+        <section>
+          <h3>LET'S START LEARN WEB DEVELOPMENT ANGAIN!!</h3>
+          <!-- <img> digunakan untuk menampilkan gambar pada website kita. karena image yang akan kita gunakan masih berada pada local server maka kita tidak perlu menampilkan url address pada source (src) dalam tags <img>.
+       atribut alt digunakan untuk membantu kita apabila image gagal di load atau di render pada website, dan kita akan segera tahu image yang mana mengalami masalah agar cepat kita ketahui disebelah mana image tersebut ditulis pada code dan cepat kita perbaiki -->
+
+          <!-- cumilative layout shift adalah ketika sebuah image ataupun tombol pada sebuah website yang bergerak sendirinya dan muncul pop up ataupun hal lainnya yang tidak kita inginkan, ataupun ketika kita mengeklik sebuah gambar ataupun tombol yang mana kedua hal tersebut malah bergerak -->
+
+          <!-- title pada tags <img> digunakan untuk abriviation pada image, yang mana akan ada tulisan yang muncul ketika kita mengarahkan kursor ke gambar tersebut -->
+          <img
+            src="img/greetings.png"
+            alt="greetings.png image"
+            title="Welcome Back to Website Developer Gustut"
+            width="300"
+            height="300"
+          />
+          <!-- penggunaan tags <figure> dapat digunakan seperti dibawah ini, yaitu dapat ditambahkan dengan content dari tags <code> html yang ditampilkan dibawah captions oleh tags <figcaption> -->
+          <figure>
+            <figcaption>WE REALLY WAITING TO YOU TO COMEBACK!!</figcaption>
+            <p>
+              <code>&lt;h1&gt;WHATS UP&lt;/h1&gt;</code>
+            </p>
+          </figure>
+          <p>
+            I really love to seeing you angain after 5 years you away from IT
+            things, don't be afraid of me angain okey?
+          </p>
+        </section>
+
+        <section>
+          <!-- h3 menjelaskan Subtopic dalam h2 -->
+          <h3>Let's become FULL STACK Developer</h3>
+          <p>
+            First, let's learn about HTML, sound stupid, but it's really
+            fundamental that can help us inside the compleks module in the
+            future
+          </p>
+        </section>
+      </article>
+
+      <hr />
+      <!-- Jika ingin membuat break sebanyak 150 maka gunakan br*150 dan enter
+     ini akan memudahkan kita dalam membuat break banyak, jika hanya ingin 2 break ya br*2 dan enter -->
+      <!-- <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /> -->
+      <!-- ========================================================================= -->
+
+      <article id="learning_progress">
+        <!-- h2 menjelaskan Subtopic dari h1 -->
+        <h2>REMEMBER TO CHECK YOUR PROGRESS</h2>
+        <section>
+          <h3>YOU ALREADY IN THE RIGHT PATH!</h3>
+          <!-- Tags <figure> digunakan untuk memberikan nested tags <ficaption> yaitu digunakan untuk memberikan captions(tulisan) tepat dibawah image -->
+          <figure>
+            <!-- loading pada tags <img> dengan value "lazy" berarti image hanya akan di render ketika image pada suatu page sudah mulai muncul pada layar user, itu berarti jika posisi image dibawah dan layar display user masih dibagian atas, maka image yang diposisi dibawah ini belum dirender, sedangkan value "eager" sebaliknya, yang mana walaupun display user tidak ke bagian gambar diposisi bawah, semua gambar yang tidak dalam display user akan di render.
+        
+          Dengan value "lazy" akan sangat membantu performa website kita karena tidak memberikan render gambar terlalu berat pada awal akses dan memiliki balance traffic user ke server-->
+            <img
+              src="img/cheerful.png"
+              alt="cheerfull.png"
+              title="Remember to always check your progress. You already on the right path!!!"
+              width="300"
+              height="300"
+              loading="lazy"
+            />
+            <figcaption>Let's check how far we have been going!</figcaption>
+          </figure>
+          <p>
+            always checking your progress can help you learn more effectively
+            without lost in the learning journney
+          </p>
+          <p>
+            Just follow the step by step learning how to become full stack
+            developer so you not confuse with the module and how to do the
+            things when you learn it
+          </p>
+        </section>
+
+        <section>
+          <!-- h3 menjelaskan Subtopic dalam h2 -->
+          <h3>PROGRESS CHECKLIST</h3>
+          <p>
+            <!-- HTML entities (&nbsp, &lt, &gt,&copy dll.) adalah sebuah entitas yang digunakan dalam memformat tulisan, entah spasi, symbol dan lain-lain. Biasanya HTML entyty dimulai dengan "&" -->
+            <!-- &nbsp adalah salah satu html entities yaitu : menambah ekstra spasi dalam tulisan, hal ini lebih baik dari pada menekan spasi berkali - kali untuk melakukan sepasi pada tulisan-->
+            Here your Checklist:
+          </p>
+
+          <!-- List sangat berguna pada web page, list terbagi menjadi 3 yaitu: 
+       (1) Ordered list <ol> 
+       (2) Unordered list <ul> 
+       (3) Description list <dl>-->
+
+          <!-- ol berarti ordered list, biasanya berfungsi sebagai list nomor pada setiap tulisan dalam sebuah nested-->
+          <ol>
+            <!-- li berarti list -->
+            <li>... Learn HTML First</li>
+            <li>... Learn CSS</li>
+            <!-- abbr adalah abreviation yang digunakan untuk menaruh informasi lebih lengkap pada sebuah text -->
+            <!-- a adalah achor yang digunakan untuk link atau menghubungkan page ke page lainnya sesuai address yang diinputkan pada hypertext reference(href)-->
+            <li>
+              ... Learn about<abbr title="JAVASCRIPT LEARNING">
+                <!-- ini merupakan contoh absolute refrences yang mengarahkan user ke page lain dengan tags <a> (anchor) -->
+                <a href="https://roadmap.sh/javascript">JAVASCRIPT</a></abbr
+              >
+            </li>
+            <li>... Learn about NPM</li>
+            <br />&nbsp;&nbsp;&nbsp;... Learn about GIT and GITHUB
+            <br />... Learn about Tailwind CSS
+            <br />... Learn about
+            <abbr title="REACT FRAMEWORK">React</abbr>
+          </ol>
+          <!-- <aside> adalah symentic elemen yang berfungsi untuk menampilkan tulisan pendetailan apabila di click detailnya. Tag <aside> harus berisikan conten <detail> yang didalamnya ada <summary> sebagai label depan dan <p> sebagai penjelas dari label tersebut -->
+          <aside>
+            <details>
+              <summary>Guesst how much <mark>FUN</mark> it is?</summary>
+              <!-- <time> adalah tags yang digunakan untuk mendeklarasi waktu pada html, penggunaannya dapat di deklarasikan di setiap tulisan yang mendefinisikan waktu page -->
+              <p>
+                Its began starting fun when you understand a lot of fondation
+                that require building a html file first. Let's start your study
+                from <time datetime="22:00">8 pm</time> and do it
+                <time datetime="PT4H">4 hours</time>a day.
+              </p>
+            </details>
+          </aside>
+
+          <!-- <br> adalah elemen dalam memberikan kita enter (break) pada page kita -->
+          <br />
+          <!-- <table> merupakan elemen yang memberikan layout table pada web page kita, atribut pelengkapnya adalah <tr> atau table row dalam menentukan row pada table kita dan <td> atau table data yang memberikan data pada setiap <tr> pada <table>  -->
+
+          <!-- jika kita melakukan inspect element pada browser dan menghover ke elemen <table> (mengarahkan kursor ke elemen <table>), maka akan terlihat gap antara layout table dengan sekitarnya, nah area sekitar table tersebut merupakan margin(atau area berwarna oranye) dari layour page tersebut -->
+          <table>
+            <!-- <caption> ini bisa digunakan sebagai title dari table kita -->
+            <caption>
+              Your Sequentially for Learn HTML
+            </caption>
+
+            <!-- dalam element <table> pada html, kita bisa melakukan simentic head dan body seperti pada html, pada kolom kita bisa gunakan <thead> atau table head dan row datanya kita bisa gunakan <tbody> table body -->
+            <!-- Dalam HTML kitalah yang menentukan yang mana akan menjadi row dan yang mana akan menjadi kolom. Nah cara yang bisa kita gunakan adalah dengan mendefinisikan <tr> table row yang pertama setelahnya. 
+              
+            <tr> paling atas kita gunakan sebagai nama kolom walaupun element yang kita gunakan tetaplah table row <tr>, tapi memang seperti inilah pendefinisiannya. Barulah <tr> setelahnya kita anggap sebagai baris, contoh dibawah merupakan contoh lengkap bagaimana pendefinisian kolom dan row table pada html-->
+
+            <thead>
+              <!-- <tr> Pertama ini kita gunakan sebagai kolom dan nama kolomnya kita gunakan <th> atau table header agar mencirikaskan nama kolom dengan tulisan tebal -->
+              <tr>
+                <!-- kita bisa melakukan table header secara vertikal pada setiap <tr> table row, ini akan menghasilkan sebuah colom dengan secara vertikal. berikut caranya:
+                pertama kita mendeklarasi tags table header <th> dengan value &nbsp (<th>&nbsp;</th>), setelahnya kita mendefinisikan <th> secara inline element pada tags <tr> -->
+                <th>&nbsp;</th>
+
+                <!-- <th> adalah table heading, yang mana digunakan untuk menamai colom dalam table 
+                atribut scope="" dengan value col yaitu mendefinisikan bahwa setiap <th> pada elemen <thead> merupakan sebuah column.
+                Jika kolom berbentuk vertikal maka kita menggunakan atribute yang sama namun dengan value row seperti ini scope="row" 
+                Atribute scope ini juga dapat menggantikan penggunaan atribute pada element table agar kita tidak perlu terlalu banyak mendefinisikan id pada setiap kolomnya dan hal ini dapat membantu membuat table dengan input dynamis lebih mudah.-->
+                <th scope="col">Count Step</th>
+                <th scope="col">Details</th>
+                <th scope="col">Duration</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <!-- <tr> dibawah ini dan seterusnya barulah menjadi row atau baris pada setiap kolom dalam html -->
+              <tr>
+                <!-- ini merupakan contoh kita mendeklarasikan nama kolom secara vertikal untuk row data Pertama -->
+                <th scope="row">Basic</th>
+
+                <td>First Step</td>
+                <td>Understanding Basic Html</td>
+                <td><time datetime="PT8H"></time>8 hours</td>
+              </tr>
+              <tr>
+                <!-- ini merupakan contoh kita mendeklarasikan nama kolom secara vertikal untuk row data Kedua -->
+                <th scope="row">Deep Learn</th>
+
+                <td>Second Step</td>
+                <td>Learn Deeply about all the HTML element</td>
+                <td><time datetime="PT6H"></time>6 hours</td>
+              </tr>
+              <tr>
+                <!-- ini merupakan contoh kita mendeklarasikan nama kolom secara vertikal untuk row data Ketiga -->
+                <th scope="row">Maybe Advance, im joking</th>
+
+                <td>Third Step</td>
+                <td>Try and Error do some progect</td>
+                <td><time datetime="PT5H"></time>5 hours</td>
+              </tr>
+              <!-- ini adalah cara seperti membuat total jumlah pada table excel. Instinya atribut colspan="" yaitu melakukan merger cell kesamping sebanyak jumlah parameter yang diinputkan -->
+              <tr>
+                <td colspan="2">Total Duration :</td>
+                <td><time datetime="PT19H"></time>19 hours</td>
+              </tr>
+
+              <!-- ini adalah cara merger 2 row pada excel yaitu dengan atribut rowspan="" pada tags <td> table data. 
+              Cara kerjanya adalah jumlah row yang akan di merger tergantung dari berapa input <tr> dibawah setelah tags yang berisikan rowspan ini, contohnya dibawah ini rowspan diinputkan nilai "3" (rowspan="3") yang berarti 3 <tr> termasuk <tr> dengan <td> atribut rowspan="" akan dilakukan merger.
+              Merger yang dilakukan adalah setiap <td> pertama pada setiap <tr> akan diletakkan di kolom pertama, setiap <td> kedua pada kolom kedua dan seterusnya sesuai jumlah input pada parameter rowspan="" -->
+              <tr>
+                <td rowspan="3">Total Step Require and Duration</td>
+                <td>3 Steps</td>
+                <td>JEPANG!!</td>
+                <td>UWAW</td>
+              </tr>
+              <tr>
+                <td><time datetime="PT19H">19 Hours</time></td>
+                <td>SUSHI!!!</td>
+                <td>HAII HAII</td>
+              </tr>
+              <tr>
+                <td>123981y47y194</td>
+                <td>124y812y47912y49</td>
+                <td>12378173981</td>
+              </tr>
+            </tbody>
+            <tfoot>
+              <tr>
+                <td colspan="3">Total Rowspan Upper this:</td>
+                <td>3 Rowspan with 9 row data</td>
+              </tr>
+            </tfoot>
+          </table>
+        </section>
+
+        <section>
+          <h3>DID YOU ENJOY THE LEARNING?</h3>
+          <!-- ul berarti unordered list, biasanya berfungsi sebagai list simbol pada setiap tulisan dalam sebuah nested-->
+          <!-- kode dibawah menghasilkan list berupa simbol dot dengan spasi antara list 1 dengan lainnya dengan elemen unorderedlist(ul). Hal itu dikarenakan adanya element paragraph(p) dalam element list (li) -->
+          <ul>
+            <li>
+              <p>
+                I Hope you enjoy your journey to keep learn become
+                <em>Full Stack Developer</em>, anyway i more like you been here
+                rather being Data Analyst, <strong>its boring there XD</strong>
+              </p>
+            </li>
+            <li>
+              <p>
+                Well, the diffrents being Full Stack and Data Analyst was, full
+                stack was about CRUD STATE and maintaince the webserver for your
+                user, while Data Analyst was focus on science things on data, I
+                know you not smart enough on science so lets just get rid from
+                that for a while, and stay your brain on Full Stack cause it's
+                more fit in. Now focus your work on:
+              </p>
+              <address>
+                Your House in Denpasar City
+                <br />
+                Basecamp in Abiansemal village <br />
+                Harry Office at Ranna Cosmetic Shop
+              </address>
+              <figure>
+                <img
+                  src="img/joy.png"
+                  alt="joy.png"
+                  title="Hope you love learning WEB DEVELOPER"
+                  width="300"
+                  height="300"
+                  loading="lazy"
+                />
+                <figcaption>Keep it Up GUSTUT!!</figcaption>
+              </figure>
+            </li>
+          </ul>
+        </section>
+
+        <section>
+          <h3>What can help us in Learning Process?</h3>
+          <!-- dl berarti desription list adalah list yang tanpa nomor dan simbol namun di uraikan dalam bentuk term dan detail dari term tersebut. <dl> memiliki 2 element utama yaitu description term(dt) dan description detail(dd) dan berbeda dari elemen ordered dan unordered list lainnya memakai elemet list(li)-->
+          <!-- dt berarti description term berfungsi seperti subtopic namun berbentuk list-->
+          <!-- dd berarti description detail berfungsi untuk pendetailan description term -->
+          <dl>
+            <dt>Get Rest well</dt>
+            <dd>Sleep <strong>8 hours</strong> a day can be help</dd>
+            <dt>Take 5 minute Role</dt>
+            <dd>
+              push yourself for just learninng 5 minute if your brain really
+              rebelious, then after 5 minute you allow do others things if you
+              want it
+            </dd>
+          </dl>
+        </section>
+      </article>
+
+      <hr />
+
+      <article id="contactme">
+        <h2>Hey Contact Me with this form</h2>
+        <p>Let's knowing each other Gustut</p>
+        <!-- <form> adalah elemen yang digunakan untuk membuat form yang mana terdapat beberapa inner element yaitu <label>, <input> -->
+        <form action="https://httpbin.org/get" method="get">
+          <!-- tags <fieldset> adalah simentic element yang memberikan border pada element2 yang ada didalamnya, biasanya setelah fieldset akan dideklarasikan tags <legend> -->
+          <fieldset>
+            <!-- tags <legend> hampir seperti caption pada fieldset, tapi dengan legend biasanya dapat membuat tags <fieldset> terlihat menarik -->
+            <legend>Problems Solves</legend>
+            <!-- tags <label> digunakan untuk memberikan label pada Form agar memudahkan user untuk memberikan identitas apa yang harus diinputkan, atribute for="" dengan value problems memiliki fungsi sama seperti id="" yang mana value ini digunakan pada element <input> nantinya-->
+            <p>
+              <label for="problems">Tell me your problems:</label>
+              <!-- tags <input> adalah tempat user menginputkan informasi tertulis ke webpage. beberapa attribut yang digunakan disini antara lain: 
+          -type="" yaitu memberikan format inout apakah harus text ataukah numeric atau berupa password, jika value pada atribute ini berupa "password" maka data yang ditulis user pada field input akan menjadi DOT DOT DOT. 
+          -name="" yaitu disesuaikan dengan value attribute for pada tags <label> agar nantinya label digunakan sebagai pembalik data yang diinputkan user, 
+          -id="" disamakan valuenya dengan name="", 
+          -placeholder yaitu memperikan watermark pada form agar lebih memudahkan user untuk menginputkan data secara akurat, 
+          -autocomplete="" dengan value on berarti jika user sudah pernah menginputkan data dan melakukan akses kembali, maka page akan merecomendasikan data apa saja yang pernah diketikkan pada user (cocok untuk login pada id login, namun JANGAN PERNAH MENGGUNAKAN autocomlete pada PASSWORD!!!), 
+          -required adalah atribute checking agar user tidak menginputkan form kosong ke webpage, atribute required ini sebenarnya memiliki value "true" dan "false", namun agar lebih mudah jika kita hanya memanggil attribute required maka sudah dianggap "true" dan jika kita tidak memanggil atribute ini, maka dianggap "false"
+          -autofocus yang mana hanya 1 element pada form dan pada page yang boleh memiliki atribute autofocus karena kita tidak bisa memaksa user pada banyak fokus. atribute ini berfungsi untuk mengarahkan user langsung pada element yang memiliki autofocus ini (pada contoh ini yaitu pada form), fungsinya adalah agar user langsung terarah pada hal penting dan utama pada web page teresbut-->
+              <input
+                type="text"
+                name="problems"
+                id="problems"
+                placeholder="tell us your problems"
+                autocomplete="on"
+                required
+                autofocus
+              />
+            </p>
+            <!-- tags <p> paragraf sangat cocok sebagai best practice untuk memberikan space dan jarak (agar terlihat lebih user friendly) pada setiap input field dalam satu form -->
+            <p>
+              <label for="feelings">Tell your feeling after learn this?</label>
+              <input
+                type="text"
+                name="feelings"
+                id="feelings"
+                placeholder="How's Your Feeling?"
+                autocomplete="on"
+                required
+              />
+            </p>
+            <p>
+              <label for="planning">What's your plan to learn this?</label>
+              <input
+                type="text"
+                name="planning"
+                id="planning"
+                placeholder="Tell me your plan"
+                required
+              />
+            </p>
+            <p>
+              <label for="Phone Number">Would you input your number?</label>
+              <!-- atribute type="" dengan value tel digunakan agar field input berformat nomor telepon. Kenapa kita tidak menggunakan tipe data text ataupun number?, alasan utamanya adalah ketika user menginputkan nomor telepon pada field akan memeudahkan user karena keypad yang muncul ketika pada mobile device adalah number keypad(berupa angka saja), jika kita menginputkan number atau text maka yang muncul pada keypad user adalah nomor dan huruf (tentu ini agak mempersulit user dan beresiko input salah) 
+            -attribute pattern="" akan mendeskripsikan angka apa saja yang boleh kita masukkan pada brakets [] dan format jumlah angka disetiap inputnya pada {}. jika kita kita memerlukan 12 angka sebagai input no.hp, maka contoh dibawah bisa digunakan (coba mengertikan maksudnya gampang kok, klo valuenya dalam {} 4 berarti dipanggil 3 kali, klo valuenya {} 3 maka dipanggil 3 kali dst.)-->
+              <input
+                type="tel"
+                name="Phone Number"
+                id="Phone Number"
+                placeholder="0852-XXXX-XX23"
+                pattern="[0-9]{4}[0-9]{4}[0-9]{4}"
+                required
+              />
+            </p>
+            <p>
+              <label for="year">What year that you start hate this?</label>
+              <!-- jika kita melakukan input tahun, maka kita bisa menggunakan attribute type="" dengan value number. 
+             -Atribute min="" adalah value minimal yang boleh diinputkan oleh user
+             -Atribute max="" adalah value maksimum yang boleh diinputkan oleh user 
+             -Atribute step="" digunakan untuk jarak pemilihan value antara value atribute min dan max 
+             -Atribute value="" digunakan untuk memberikan value default ketika user mengakses form -->
+              <input
+                type="number"
+                name="year"
+                id="year"
+                min="1997"
+                max="2025"
+                step="2"
+                value="2004"
+              />
+            </p>
+            <p>
+              <label for="place"
+                >Where your Favorite Place to learn this?</label
+              >
+              <!-- tags <select> digunakan untuk memberikan field drop down list pada user jika kita ingin memberikan input berupa string tanpa value yang sangat random pada user(user hanya akan memilih value sesuai list yanng kita defaultkan) 
+            -Atribute multiple yang mana digunakan agar user dapat memilih lebih dari 1 pilihan dengan memencet ctrl.
+            -Atribute size="" digunakan untuk menampilkan jumlah option pertama pada dropdown list sesuai dengan value yang di deklarasikan.
+            Berikut contohnya:
+            <select name="place" id="place" multiple size="3">-->
+              <select name="place" id="place">
+                <!-- tags <optgroup> digunakan untuk melakukan grouping option pada dropdown list yang mana akan memudahkan user untuk memeilih, atribute yang digunakan adalah label=""dengan value nama pengelompokan <option> yang ada pada inner element tags <optgroup> -->
+                <optgroup label="Inside">
+                  <!-- tags <option> adlaah inner element yang digunakan untuk membuat list pada tags <select>, value pada atribute value="" harus berdasarkan value dari tags ini agar memudahkan kita untuk mengolah data list yang dipilih oleh user kedalam database nantinya.  -->
+                  <option value="house">Your House</option>
+                  <option value="pondok">Pondok dauh?</option>
+                </optgroup>
+                <optgroup label="Outside">
+                  <!-- atribute selected digunakan untuk mendefault field dropdown list agar ketika diakses field akan langsung mendefault option yang mana, (ini sebaiknya disimpan juga pada cookies agar dapat mempercepat pelayanan website ke user) -->
+                  <option value="mieTime" selected>Mie time Mambal?</option>
+                  <option value="harryOffice">Harry Office at ranna?</option>
+                  <option value="officeWork">Your Current Office?</option>
+                  <option value="randomPlace">at random Place</option>
+                </optgroup>
+              </select>
+            </p>
+            <p>
+              <label for="need">Stuff Needed?</label>
+              <!-- Dibawah ini kita mencontohkan menggunakan tags <detaillist> yang menampilkan dropdownlist lebih userfriendly atau mungkin terlihat lebih baik daripada tags <selected>.
+            -Pertama kita mendefinisikan tags <input> dengan atribute tambahan yaitu list="", value dari atribute list="" ini akan dijadikan value dalam atribute id="" pada tags <detailist>-->
+              <input type="text" name="need" id="need" list="need_list" />
+              <!-- Tags <detailist> menggunakan atribute id="" dengan value yang sama pada atribute list=""  pada tags <input>-->
+              <datalist id="need_list">
+                <!-- adanya hal unik dengan menggunakan <detailist> adalah pada tags option kita tidak perlu mendeskripsikan valuenya, tapi kita mendeskripsikan value atau list pada atribute valur="" -->
+                <option value="laptop"></option>
+                <option value="cloths"></option>
+                <option value="veichle"></option>
+                <option value="glasses"></option>
+                <option value="beloved"></option>
+                <option value="books"></option>
+              </datalist>
+            </p>
+          </fieldset>
+
+          <br />
+
+          <fieldset>
+            <legend>Can you give us Relationship information</legend>
+            <p>
+              <!-- Atribute type="" degan value radio digunakan untuk membuat Radio Button atau pilihan dengan Dot yang bisa di click (tapi hanya boleh memilih 1 pilihan saja). Aturan penting dalam menggunakan tags <input> dengan atribute type="radio" ini adalah pada value atribute name="" dan id="" berbeda dan value name="" pada setiap input harus sama.
+              -Atribute id="" harus memiliki value yang sama dengan value atribute for="" -->
+              <input
+                type="radio"
+                name="information"
+                id="single"
+                value="Your Name"
+              />
+              <label for="single">Single</label>
+            </p>
+            <p>
+              <input
+                type="radio"
+                name="information"
+                id="ownCrush"
+                value="Own Crush"
+              />
+              <label for="ownCrush">Own a Crush</label>
+            </p>
+            <p>
+              <input
+                type="radio"
+                name="information"
+                id="inRelationship"
+                value="in Relationshop"
+              />
+              <label for="inRelationship">in Relationship</label>
+            </p>
+          </fieldset>
+
+          <br />
+          <fieldset>
+            <!-- dibawah ini merupakan cara membuat checklist pada webpage yang mana cara penulisan code Htmlnya hampir sama dengan Radio Button diatas. Hal yang spesial dari Check Box ini adalah user dapat memilih lebih dari 1 Check Box -->
+            <legend>Input Your Gender</legend>
+            <p>
+              <input type="checkbox" name="gender" id="male" value="Male" />
+              <label for="male">Male</label>
+            </p>
+            <p>
+              <input type="checkbox" name="gender" id="female" value="Female" />
+              <label for="female">Female</label>
+            </p>
+            <p>
+              <input type="checkbox" name="gender" id="others" value="Others" />
+              <label for="others">Others..</label>
+            </p>
+          </fieldset>
+
+          <br />
+          <fieldset>
+            <!-- dibawah ini adalah cara membuat field paragrapf untuk mendapatkan information deskripsi, pengalaman atau informasi yang dibutuhkan. Pertama kita mendefinisikan value pada atribute for="", nantinya value ini akan diinputkan lagi pada value atribute name="" dan id=""-->
+            <legend>Send me A Note</legend>
+            <label for="note">Write your Note:</label>
+            <br />
+            <!-- tags <textarea> adalah element yang digunakan untuk membuat field input form paragraft. kita bisa melihat pada atribute name="" dan id="" memiliki value yang sama dengan atribute for="" pada tags <label>. 
+            -Atribute cols="" dan rows="" digunakan untuk mengatur lebar dan tinggi form ini. 
+            -Kita tidak menambahkan value pada tags <textarea> ini karena akan merepotkan user, cukup dengan placeholder saja -->
+            <textarea
+              name="note"
+              id="note"
+              cols="30"
+              rows="10"
+              placeholder="Type your note here"
+            ></textarea>
+          </fieldset>
+
+          <br />
+          <!-- sebenarnya kita bisa menggunakan tags <input> dengan value submit pada atribute type="" seperti dibawah ini 
+          
+          <input type="submit" value="">
+          
+          namun hal ini memiliki banyak kelemahan dibandingkan tags <button>, maka dari itu kita sebaiknya menggunakan tags <button> saja karena kita bisa menginputkan banyak jenis value-->
+          <button type="submit">Submit</button>
+          <!-- dibawah ini merupakan button POST yang berfungsi untuk melakukan post ke weblink yang sama pada tags <form> tapi dengan /post (karena pada atribute actions="" di tags <form> menggunakan /get di akhir link) 
+            perbedaan antara /get dan /post adalah /get akan menampilkan seluruh data yang diinputkan oleh user termasuk data yang seharusnya bersifat sensistif dan privasi seperti password, no kartu dll. tapi dengan methode /post akan melakukan posting tanpa menampilkan data sensitive pada user.
+            -atribute formaction="" digunakan untuk mengganti value atribute actions pada form sesuai value pengganti yang diinputkan apabila tags tersebut memang bisa di di interaksikan contohnya dibawah ini tags <button> yang menggunakan atribute formaction="" dengan value yang sama dengan atribute action="" pada tags <form> namun dengan memanggil method /post (agar tidak /get seperti value atribute actions pada <form>)
+            -Atribute formmethod="" dangan value post digunakan untuk melkaukan post pada value formaction=""-->
+          <button
+            type="submit"
+            formaction="https://httpbin.org/post"
+            formmethod="post"
+          >
+            POST
+          </button>
+          <!-- dengan value reset pada atibute type="" maka akan berfungsi untuk mereset value form untuk mengisi ulang -->
+          <button type="reset">Reset</button>
+        </form>
+      </article>
+    </main>
+
+    <hr />
+    <!-- ========================================================================= -->
+
+    <!-- <footer> sama seperti tags <header> yang mana dapat ditulis lebih dari 1 kali dalam pages dan berfungsi untuk pengelompokkan beberapa elemen beserta kontennya. Namun footer ini biasanya diletakkan pada bagian content terakhir atau mudahnya dideklarasikan setelah tags <header> 
+    
+    <footer> juga sebaiknya ditulis setelah elemen beserta konten untuk footer selesai ditulis-->
+    <footer>
+      <!-- &lt adalah less than, &copy adalah format symbol copyright dan &gt adalah greater than  -->
+      <!-- ini merupakan contoh absolute refrences yang mengarahkan user ke page lain dengan tags <a> (anchor) -->
+      <p>
+        &lt;&lt;&lt; &copy;
+        <a href="about.html">
+          <abbr title="Tentang Knowledge AI">Knowledge AI</abbr>
+        </a>
+        &gt;&gt;&gt;
+      </p>
+      <p>
+        <a href="#">Back to TOP!!</a>
+      </p>
+    </footer>
+  </body>
+  <!-- List sangat berguna pada web page, list terbagi menjadi 3 yaitu: (1)ordered list/ol (2)unordered list dan (3)description list -->
+</html>

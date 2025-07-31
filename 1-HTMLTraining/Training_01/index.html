@@ -1,0 +1,290 @@
+<!-- Make sure your name file lowercase and without space for easyest hosting our website, 
+ because uppercase make it problem -->
+
+<!-- Dengan extension VSCode Live Server by Ritwick Dey, kita akan dibuatakan server local secara otomatis
+ dan page yang kita buat langsung. ekstension ini juga membantu kita membuat development server. -->
+
+<!-- Address yang disiapkan untuk kita dalam live server adalah seperti ini : 
+  http://127.0.0.1:5500/index.html atau bisa disebut dengan local server kita atau dev environtment
+  127.0.0.1 = ip address
+  5500 = PORT NUMBER-->
+
+<!DOCTYPE html>
+
+<!-- html disebut dengan elemen, nah dalam html terbagi menjadi 2 area yaitu :
+ 1. area yang terlihat dalam page (body)
+ 2. area metadata yang tidak terlihat dalam page (head), namun menunjukkan identitas page tersebut 
+ dalam elemen html kita juga harus mendeklarasikan bahasa (lang), jika tidak maka eror pada cek W3C.com
+ -->
+<!-- ATURAN PENTING dalam melakukan link pada web adalah "JANGAN SAMPAI MENUNJUKKAN ADDRESS LINK WEB PAGE ATAUPUN SECTION PADA USER, HAL INI BISA MENJADI KUNCI UTAMA DALAM HACKING!!" -->
+
+<!-- ATURAN PENTNG lainnya adalah jangan menulis "ini menuju link ke" karena itu sangat redudansi. Jangan pernah menulis link pada sebuah link, karena sangat redudansi dan terlihat jelek. PASTIKAN link hanya ditulis dalam 1 kata ataupun dalam sebuah tombol saja, JANGAN KALIMAT!!.
+ JANGAN juga menggunakan kata "click here" karena sangat monoton dan jelek-->
+
+<!-- Ada 3 jenis link yang bisa kita buat dalam main html yaitu :
+     1. Absolute Refrences, contohnya pada tags <a> dalam body elemen untuk pindah ke tabs lain
+     2. Relative Refrences, contohnya pada tags <link> dalam head elemen yang mengambil sesuatu dari directory folder progect kita
+     3. Internal Refrences, contohnya pada tags <nav>&<a> yang mengarahkan pada section dalam sebuah page
+     -->
+<html lang="en">
+  <!-- head adalah area (2) atau metadata dalam html, area ini diistilahkan head section -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="author" content="Knowledge AI" />
+    <!-- pencet alt + z untuk wraping text jika ada enter -->
+    <!-- element meta dapat memberikan informasi pada search engine atau memberikan informasi lainnya mengenai services website kita -->
+    <meta
+      name="description"
+      content="Page ini akan membantu kamu dalam belajar HTML jika ada enter pada element seperti ini ingat pencet alt+z"
+    />
+    <title>Improve Website Skill</title>
+    <!-- pada elemen link, rel berarti relate dan href berarti html reference
+         type adalah jenis dimana gambar akan dipasang -->
+    <!-- link yang kita buat disini belumlah menunjukkan https refrensi alamat adrress pada hostingan dan masih menggunakan local https refrensi. hal ini karena kita masih menggunakan refrensi local seperti ini href="html.png", sedangkan refrensi dengan hosting berisikan https:\ -->
+    <!-- Dibawah merupakan contoh link dengan relative refrences yang me link elemen2 yang mendukung hal2 yang ada pada page itu sendiri dengan tags <link> -->
+    <link rel="icon" href="html.png" type="image/x-icon" />
+    <link rel="stylesheet" href="main.css" type="text/css" />
+  </head>
+
+  <!-- body adalah area (1) yang akan terlihat dalam page, area ini diistilahkan body section -->
+  <body>
+    <!-- <header> dapat ditulis belakangan setelah kita selesai menyelesaikan heading hirarki penulisan <h1>-<h6>, dan <header> dapat dituliskan lebih dari 1 kali dalam sebuah page -->
+    <header>
+      <!-- terdapat hirarki dalam penulisan text header(h1,h2,h3,h4) yang mana semuanya harus berurutan dan bukan di tulis acak pada elemen body -->
+      <!-- paragraph atau p dapat berfungsi sebagai detail dari setiap header yang sudah kita deklarasikan -->
+
+      <!-- h1 menjelaskan main topic -->
+      <h1>HEY WELCOME BACK GUSTUT!!</h1>
+
+      <!-- Block Level Element
+        Block level element adalah setiap elemen tulisan seperti header, paragraph dan lainnya dilakukan pada setiap baris baru. Block level elemen adalah pendekatan penulisan element pada setiap baris baru (bukan dalam 1 baris) yang mana dapat di format lagi pada CSS kedepannya. Block level element tidak mengijinkan membuat paragraph dalam sebuah header seperti ini: 
+        <h3>
+            contoh block level elemen 
+            <p>
+                seperti ini bisa seharusnya dipakai contoh 
+            </p>
+        </h3> -->
+
+      <!-- Inline Level Element
+        Inline level element adalah penulisan elemen dalam elemen, tapi bukan elemen dari block line elemen, namun lebih kepada elemen yang melakukan perubahan format tulisan pada block level elemen. Inlive level elemen contohnya seperti ini
+        <p>
+            <strong> contoh inline level elemen </strong>  
+            seperti <em>ini</em> bisa seharusnya dipakai contoh 
+        </p>
+        -->
+
+      <!-- horizontal rules <hr> yang berfungsi untuk membuat garis horisontal dalam membagi setiap aspek element ataupun header dalam body, serta dapat juga sebagai percantik page
+    hal lainnya dengan <hr> adalah pembatas topic dalam sebuah page, yang mana setiap topic ataupun sectionnya bisa kita batasi juga dengan horisontal rule <hr> -->
+      <hr />
+      <!-- <nav> adalah simentic element yang digunakan untuk navigation area atau area navigasi, hal lainnya adalah agar memudahkan kita membaca html pada website kita 
+        Jika kita memiliki lebih dari 1 element <nav> dalam 1 page, maka sebaiknya kita melabeli dengan aria-label="" setiap <nav> agar tidak membingungkan-->
+      <nav aria-label="primary-navigation">
+        <!-- Jika kita menambahkan heading dalam tags <nav> (sebenarnya tidak perlu, tapi semisalnya) seperti ini:
+            <nav>
+                <h2>
+        Maka kita perlu melabelkan nav tersebut sesuai id pada <h2> dan kita rubah aria-label= menjadi aria-labelledby="". berikut contohnya :
+            <nav aria-labelledby="primary-navigation">
+                <h2 id="primary-navigation">Primary Navigation</h2>
+        -->
+        <ul>
+          <li>
+            <!-- ini merupakan contoh melakukan Internal Link Refrences, yang mana link yang kita lakukan masih dalam 1 page namun kita melakukan link pada section yang ada pada page tersebut -->
+            <a href="#html_main"> WELCOME BACK!!</a>
+          </li>
+          <li>
+            <a href="#learning_progress"> Let's Learn!!</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <hr />
+    <!-- ========================================================================= -->
+
+    <!-- <main> adalah simentic elemen yang dituliskan sebelum <section> pertama dan setelah <section> penutup. tags <main> hanya dituliskan 1 saja per page dalam website. tags <main> dapat dituliskan nanti setelah kita selesai mendeklarasikan section dan conten didalamnya -->
+    <main>
+      <!-- <section> (Section) adalah simentic element yang digunakan untuk internal link refrences yaitu mengarahkan user pada beberapa bagian yang ada pada sebuah page sesuai id="..." pada section yang di link -->
+      <section id="html_main">
+        <!-- h2 menjelaskan Subtopic dari h1 -->
+        <h2>WE REALLY MISS YOU</h2>
+        <!-- <img> digunakan untuk menampilkan gambar pada website kita. karena image yang akan kita gunakan masih berada pada local server maka kita tidak perlu menampilkan url address pada source (src) dalam tags <img>.
+       atribut alt digunakan untuk membantu kita apabila image gagal di load atau di render pada website, dan kita akan segera tahu image yang mana mengalami masalah agar cepat kita ketahui disebelah mana image tersebut ditulis pada code dan cepat kita perbaiki -->
+
+        <!-- cumilative layout shift adalah ketika sebuah image ataupun tombol pada sebuah website yang bergerak sendirinya dan muncul pop up ataupun hal lainnya yang tidak kita inginkan, ataupun ketika kita mengeklik sebuah gambar ataupun tombol yang mana kedua hal tersebut malah bergerak -->
+
+        <!-- title pada tags <img> digunakan untuk abriviation pada image, yang mana akan ada tulisan yang muncul ketika kita mengarahkan kursor ke gambar tersebut -->
+        <img
+          src="img/greetings.png"
+          alt="greetings.png image"
+          title="Welcome Back to Website Developer Gustut"
+          width="300"
+          height="300"
+        />
+        <!-- penggunaan tags <figure> dapat digunakan seperti dibawah ini, yaitu dapat ditambahkan dengan content dari tags <code> html yang ditampilkan dibawah captions oleh tags <figcaption> -->
+        <figure>
+          <figcaption>WE REALLY WAITING TO YOU TO COMEBACK!!</figcaption>
+          <p>
+            <code>&lt;h1&gt;WHATS UP&lt;/h1&gt;</code>
+          </p>
+        </figure>
+
+        <p>
+          I really love to seeing you angain after 5 years you away from IT
+          things, don't be afraid of me angain okey?
+        </p>
+
+        <!-- h3 menjelaskan Subtopic dalam h2 -->
+        <h3>Let's become FULL STACK Developer</h3>
+        <p>
+          First, let's learn about HTML, sound stupid, but it's really
+          fundamental that can help us inside the compleks module in the future
+        </p>
+      </section>
+
+      <hr />
+      <!-- Jika ingin membuat break sebanyak 150 maka gunakan br*150 dan enter
+     ini akan memudahkan kita dalam membuat break banyak, jika hanya ingin 2 break ya br*2 dan enter -->
+      <!-- <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /> -->
+      <!-- ========================================================================= -->
+
+      <section id="learning_progress">
+        <!-- h2 menjelaskan Subtopic dari h1 -->
+        <h2>REMEMBER TO CHECK YOUR PROGRESS</h2>
+
+        <!-- loading dengan value "lazy" berarti image hanya akan di render ketika image pada suatu page sudah mulai muncul pada layar user, itu berarti jika posisi image dibawah dan layar display user masih dibagian atas, maka image yang diposisi dibawah ini belum dirender, sedangkan value "eager" sebaliknya, yang mana walaupun display user tidak ke bagian gambar diposisi bawah, semua gambar yang tidak dalam display user akan di render.
+       
+      Dengan value "lazy" akan sangat membantu performa website kita karena tidak memberikan render gambar terlalu berat pada awal akses dan memiliki balance traffic user ke server-->
+
+        <!-- Tags <figure> digunakan untuk memberikan nested tags <ficaption> yaitu digunakan untuk memberikan captions(tulisan) tepat dibawah image -->
+        <figure>
+          <img
+            src="img/cheerful.png"
+            alt="cheerfull.png"
+            title="Remember to always check your progress. You already on the right path!!!"
+            width="300"
+            height="300"
+            loading="lazy"
+          />
+          <figcaption>Let's check how far we have been going!</figcaption>
+        </figure>
+        <p>
+          always checking your progress can help you learn more effectively
+          without lost in the learning journney
+        </p>
+        <p>
+          Just follow the step by step learning how to become full stack
+          developer so you not confuse with the module and how to do the things
+          when you learn it
+        </p>
+
+        <!-- h3 menjelaskan Subtopic dalam h2 -->
+        <h3>PROGRESS CHECKLIST</h3>
+        <p>
+          <!-- HTML entities (&nbsp, &lt, &gt,&copy dll.) adalah sebuah entitas yang digunakan dalam memformat tulisan, entah spasi, symbol dan lain-lain. Biasanya HTML entyty dimulai dengan "&" -->
+          <!-- &nbsp adalah salah satu html entities yaitu : menambah ekstra spasi dalam tulisan, hal ini lebih baik dari pada menekan spasi berkali - kali untuk melakukan sepasi pada tulisan-->
+          Here your Checklist:
+        </p>
+
+        <!-- List sangat berguna pada web page, list terbagi menjadi 3 yaitu: 
+       (1) Ordered list <ol> 
+       (2) Unordered list <ul> 
+       (3) Description list <dl>-->
+
+        <!-- ol berarti ordered list, biasanya berfungsi sebagai list nomor pada setiap tulisan dalam sebuah nested-->
+        <ol>
+          <!-- li berarti list -->
+          <li>... Learn HTML First</li>
+          <li>... Learn CSS</li>
+          <!-- abbr adalah abreviation yang digunakan untuk menaruh informasi lebih lengkap pada sebuah text -->
+          <!-- a adalah achor yang digunakan untuk link atau menghubungkan page ke page lainnya sesuai address yang diinputkan pada hypertext reference(href)-->
+          <li>
+            ... Learn about<abbr title="JAVASCRIPT LEARNING">
+              <!-- ini merupakan contoh absolute refrences yang mengarahkan user ke page lain dengan tags <a> (anchor) -->
+              <a href="https://roadmap.sh/javascript">JAVASCRIPT</a></abbr
+            >
+          </li>
+          <li>... Learn about NPM</li>
+          <br />&nbsp;&nbsp;&nbsp;... Learn about GIT and GITHUB
+          <br />... Learn about Tailwind CSS
+          <br />... Learn about
+          <abbr title="REACT FRAMEWORK">React</abbr>
+        </ol>
+        <h3>DID YOU ENJOY THE LEARNING?</h3>
+        <!-- ul berarti unordered list, biasanya berfungsi sebagai list simbol pada setiap tulisan dalam sebuah nested-->
+        <!-- kode dibawah menghasilkan list berupa simbol dot dengan spasi antara list 1 dengan lainnya dengan elemen unorderedlist(ul). Hal itu dikarenakan adanya element paragraph(p) dalam element list (li) -->
+        <ul>
+          <li>
+            <p>
+              I Hope you enjoy your journey to keep learn become
+              <em>Full Stack Developer</em>, anyway i more like you been here
+              rather being Data Analyst, <strong>its boring there XD</strong>
+            </p>
+          </li>
+          <li>
+            <p>
+              Well, the diffrents being Full Stack and Data Analyst was, full
+              stack was about CRUD STATE and maintaince the webserver for your
+              user, while Data Analyst was focus on science things on data, I
+              know you not smart enough on science so lets just get rid from
+              that for a while, and stay your brain on Full Stack cause it's
+              more fit in. Now focus your work on:
+            </p>
+            <address>
+              Your House in Denpasar City
+              <br />
+              Basecamp in Abiansemal village <br />
+              Harry Office at Ranna Cosmetic Shop
+            </address>
+            <figure>
+              <img
+                src="img/joy.png"
+                alt="joy.png"
+                title="Hope you love learning WEB DEVELOPER"
+                width="300"
+                height="300"
+                loading="lazy"
+              />
+              <figcaption>Keep it Up GUSTUT!!</figcaption>
+            </figure>
+          </li>
+        </ul>
+
+        <h3>What can help us in Learning Process?</h3>
+        <!-- dl berarti desription list adalah list yang tanpa nomor dan simbol namun di uraikan dalam bentuk term dan detail dari term tersebut. <dl> memiliki 2 element utama yaitu description term(dt) dan description detail(dd) dan berbeda dari elemen ordered dan unordered list lainnya memakai elemet list(li)-->
+        <!-- dt berarti description term berfungsi seperti subtopic namun berbentuk list-->
+        <!-- dd berarti description detail berfungsi untuk pendetailan description term -->
+        <dl>
+          <dt>Get Rest well</dt>
+          <dd>Sleep <strong>8 hours</strong> a day can be help</dd>
+          <dt>Take 5 minute Role</dt>
+          <dd>
+            push yourself for just learninng 5 minute if your brain really
+            rebelious, then after 5 minute you allow do others things if you
+            want it
+          </dd>
+        </dl>
+      </section>
+    </main>
+
+    <hr />
+    <!-- ========================================================================= -->
+
+    <!-- <footer> sama seperti tags <header> yang mana dapat ditulis lebih dari 1 kali dalam pages dan berfungsi untuk pengelompokkan beberapa elemen beserta kontennya. Namun footer ini biasanya diletakkan pada bagian content terakhir atau mudahnya dideklarasikan setelah tags <header> 
+    
+    <footer> juga sebaiknya ditulis setelah elemen beserta konten untuk footer selesai ditulis-->
+    <footer>
+      <!-- &lt adalah less than, &copy adalah format symbol copyright dan &gt adalah greater than  -->
+      <!-- ini merupakan contoh absolute refrences yang mengarahkan user ke page lain dengan tags <a> (anchor) -->
+      <p>
+        &lt;&lt;&lt; &copy;
+        <a href="about.html">
+          <abbr title="Tentang Knowledge AI">Knowledge AI</abbr>
+        </a>
+        &gt;&gt;&gt;
+      </p>
+      <p>
+        <a href="#">Back to TOP!!</a>
+      </p>
+    </footer>
+  </body>
+  <!-- List sangat berguna pada web page, list terbagi menjadi 3 yaitu: (1)ordered list/ol (2)unordered list dan (3)description list -->
+</html>

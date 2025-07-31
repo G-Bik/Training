@@ -1,0 +1,22 @@
+html {
+  font-size: 22px;
+}
+
+body {
+  background-color: #333;
+  color: whitesmoke;
+}
+
+a {
+  color: aliceblue;
+}
+
+a:visited {
+  color: lightgray;
+}
+
+/* hover berarti jika kita mengarahkan cursor kita pada bagian link yang bisa di click tersebut */
+a:hover,
+a:active {
+  color: #eee;
+}
