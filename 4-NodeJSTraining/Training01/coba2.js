@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 // const nama = "Gustut";
 // const umur = 27;
 
@@ -39,10 +38,3 @@ const getName = (idUser, nama) => {
 };
 // ingat ini exports bukan export
 module.exports = getName; //bagian export fungsinya agar bisa dipakai semua file JS
-=======
-consta nama = 'Gustut';
-const umur = 27;
-const helo = (adan, wangsa) =>{
-console.log(`we adan ci ${adan} umur ci ${wangsa}`)
-}
->>>>>>> a9b1c47eaaae9059a963e41371607cf30646df1c
