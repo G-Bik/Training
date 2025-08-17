@@ -51,25 +51,28 @@ const rl = readline.createInterface({
 // });
 
 // Tugas 1
-// Membuat
+// Membuat interface input berupa nama dan noHP yang disimpan dalam file berbentuk object json, dan setiap inputan file akan bertambah bukan ditimpa. => hasilnya bisa dilihat pada test.json
+
+// Membuat interface question nama, noHP dan menyimpannya dalam bentuk object di variabel dataTangkap
 rl.question("Inputkan Nama Kalian :", (nama) => {
   rl.question("Masukkan No Hp anda :", (noHP) => {
     const dataTangkap = { nama, noHP };
 
+    // Membaca File test.json, apabila file kosong, maka akan ada 2 kondisi
     fs.readFile("data/test.json", "utf8", (err, hasil) => {
       if (err) throw err;
 
-      // kalau data kosong
+      // kalau file kosong
       if (hasil === "") {
-        // menuliskan [] pada file agar bisa diisi dnegan object
+        // menuliskan [] pada file agar bisa diisi dnegan object dan dilakukan JSON.parse dan push
         fs.writeFile("data/test.json", "[]", (err) => {
           if (err) throw err;
-          simpanData(dataTangkap);
+          simpanData(dataTangkap); //fungsi yang dibuat dibawah untuk simpan data
         });
 
-        // kalau data tidak kosong
+        // kalau file tidak kosong
       } else {
-        simpanData(dataTangkap);
+        simpanData(dataTangkap); //fungsi yang dibuat dibawah untuk simpan data
       }
     });
 
@@ -77,17 +80,17 @@ rl.question("Inputkan Nama Kalian :", (nama) => {
   });
 });
 
-// Fungsi untuk menyimpan data
+// Fungsi untuk menyimpan atau menuliskan data inputan ke test.json
 const simpanData = (dataObject) => {
-  // Membaca file secara asynchronus setelah itu dilakukan parsing agar bisa input file dengan JSON.parse
+  // Membaca file secara asynchronus setelah itu dilakukan parsing dengan JSON.parse agar nantinya data yang berbentuk object bisa di push
   fs.readFile("data/test.json", "utf8", (err, hasil) => {
     if (err) throw err;
-    const parse1 = JSON.parse(hasil);
-    parse1.push(dataObject);
+    const parse1 = JSON.parse(hasil); //parsing data
+    parse1.push(dataObject); // push data
     console.log(`Data kosong, Data pertama adalah: `);
     console.log(parse1);
 
-    //menuliskan data parsing dengan JSON.stringify
+    //menuliskan data parsing dengan JSON.stringify karena format argument pada writeFile harus berbentuk string
     fs.writeFile("data/test.json", JSON.stringify(parse1), (err) => {
       if (err) throw err;
     });
