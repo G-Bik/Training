@@ -51,6 +51,7 @@ const rl = readline.createInterface({
 // });
 
 // Tugas 1
+// Membuat
 rl.question("Inputkan Nama Kalian :", (nama) => {
   rl.question("Masukkan No Hp anda :", (noHP) => {
     const dataTangkap = { nama, noHP };
