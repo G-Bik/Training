@@ -1,0 +1,24 @@
+{
+  "name": "training04_npm",
+  "version": "1.0.0",
+  "description": "belajar NPM NodeJS",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "ls",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/G-Bik/Training.git"
+  },
+  "author": "Gustut Biksa",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/G-Bik/Training/issues"
+  },
+  "homepage": "https://github.com/G-Bik/Training#readme",
+  "dependencies": {
+    "validator": "^13.15.15"
+  }
+}
