@@ -19,6 +19,10 @@
   },
   "homepage": "https://github.com/G-Bik/Training#readme",
   "dependencies": {
+    "chalk": "^4.1.0",
     "validator": "^13.15.15"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
   }
 }
