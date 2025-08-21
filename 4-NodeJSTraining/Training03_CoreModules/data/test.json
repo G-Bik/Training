@@ -1,1 +1,8 @@
-[{"nama":"Gustut","noHP":"081391231"},{"nama":"Gek Dian","noHP":"091890310231"},{"nama":"Harrey","noHP":"0918239012093"},{"nama":"ranna","noHP":"120830912031"},{"nama":"aksdkasda","noHP":"2312314"},{"nama":"Testsatu","noHP":"190329013"}]
+[
+  { "nama": "Gustut", "noHP": "081391231" },
+  { "nama": "Gek Dian", "noHP": "091890310231" },
+  { "nama": "Harrey", "noHP": "0918239012093" },
+  { "nama": "ranna", "noHP": "120830912031" },
+  { "nama": "aksdkasda", "noHP": "2312314" },
+  { "nama": "Testsatu", "noHP": "190329013" }
+]
